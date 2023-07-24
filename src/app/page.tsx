@@ -1,6 +1,7 @@
 import './styles/main.scss'
 
-export default function Home() {
+
+function Home() {
   return (
 
 <div className='main-container'>
@@ -12,7 +13,8 @@ export default function Home() {
       <div className='dog-size-title'><h4>Dog size</h4></div>
       <div className='dog-sizes'>
         <div className='dog-size'>
-        <img src="./images/miniature.jpg" alt="" />
+        <img src='./images/miniature.png' alt="" />
+        {/* tutaj skonczylem */}
         </div>
         <div className='dog-size'>2</div>
         <div className='dog-size'>3</div>
@@ -49,3 +51,5 @@ export default function Home() {
 
   )
 }
+
+export default Home;
