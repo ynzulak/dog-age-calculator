@@ -1,4 +1,4 @@
-import styles from './page.module.css'
+import './styles/main.scss'
 
 export default function Home() {
   return (
@@ -11,7 +11,9 @@ export default function Home() {
     <div className='dog-size-container'>
       <div className='dog-size-title'><h4>Dog size</h4></div>
       <div className='dog-sizes'>
-        <div className='dog-size'>1</div>
+        <div className='dog-size'>
+        <img src="./images/miniature.jpg" alt="" />
+        </div>
         <div className='dog-size'>2</div>
         <div className='dog-size'>3</div>
         <div className='dog-size'>4</div>
