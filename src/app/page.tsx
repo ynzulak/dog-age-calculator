@@ -45,17 +45,22 @@ function Home() {
 							<Image src={large} alt='Maltese' width={100} />
 						</div>
 					</div>
-				</div>
-				<div className='dog-age-container'>
+					<div className='dog-age-container'>
 					<div className='dog-age-title'>
 						<h4>Dog age</h4>
 					</div>
 					<div className='dog-age-form'>
 						<input type='number' min='0' max='20' placeholder='0'></input>
+						<span>years</span>
+					</div>
+					<div className='dog-age-form'>
+						<input type='number' min='0' max='20' placeholder='0'></input>
+						<span>months</span>
 					</div>
 					<div className='check-btn'>
 						<button className='check'>Check</button>
 					</div>
+				</div>
 				</div>
 			</div>
 			<div className='calculator-result'>
@@ -68,9 +73,9 @@ function Home() {
 						<div className='result-description'>
 							<p>Smaller dogs usually live longer than bigger races</p>
 							<p>Your dog is: 10 years</p>
-							<p>So, if it would be human it </p>
-							<p>1</p>
-							<p>1</p>
+							<p>So, if it would be human it would be 52</p>
+							<p>Your dog is an adult now</p>
+							
 						</div>
 					</div>
 				</div>
