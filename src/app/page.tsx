@@ -16,7 +16,7 @@ function Home() {
 				</div>
 				<div className='dog-size-container'>
 					<div className='dog-size-title'>
-						<h4>Dog size</h4>
+						<h3>Dog size</h3>
 					</div>
 					<div className='dog-sizes'>
 						<div className='dog-size'>
@@ -46,20 +46,20 @@ function Home() {
 						</div>
 					</div>
 					<div className='dog-age-container'>
-					<div className='dog-age-title'>
-						<h4>Dog age</h4>
-					</div>
-					<div className='dog-age-form'>
-						<input type='number' min='0' max='20' placeholder='0'></input>
-						<span>years</span>
-					</div>
-					<div className='dog-age-form'>
-						<input type='number' min='0' max='20' placeholder='0'></input>
-						<span>months</span>
-					</div>
-					<div className='check-btn'>
-						<button className='check'>Check</button>
-					</div>
+						<div className='dog-age-title'>
+							<h3>Dog age</h3>
+						</div>
+						<div className='dog-age-form'>
+							<input type='number' min='1' max='20' placeholder='0'></input>
+							<span>years</span>
+						</div>
+						<div className='dog-age-form'>
+							<input type='number' min='0' max='11' placeholder='0'></input>
+							<span>months</span>
+						</div>
+						<div className='check-btn'>
+							<button className='check'>Check</button>
+						</div>
 				</div>
 				</div>
 			</div>
