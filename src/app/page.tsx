@@ -66,16 +66,20 @@ function Home() {
 			<div className='calculator-result'>
 				<div className='age-result-container'>
 					<div className='age-result-title'>
-						<h4>Result</h4>
+						<h3>Result</h3>
 					</div>
 					<div className='dog-size-result'>
-						<div className='dog-result-img'><Image src={miniature} alt='Maltese' width={100} height={100} /></div>
+						<div className='dog-result-img'>
+							<Image src={miniature} alt='Maltese' width={100} height={100} />
+						</div>
 						<div className='result-description'>
 							<p>Smaller dogs usually live longer than bigger races</p>
 							<p>Your dog is: 10 years</p>
 							<p>So, if it would be human it would be 52</p>
-							<p>Your dog is an adult now</p>
-							
+							<p>Your dog is an adult now</p>							
+						</div>
+						<div className='reset-btn'>
+							<button className='reset'>Reset</button>
 						</div>
 					</div>
 				</div>
