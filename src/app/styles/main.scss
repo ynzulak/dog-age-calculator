@@ -6,6 +6,7 @@ span {
 }
 
 p {
+    font-size: 18px;
     line-height: 1.8rem;
 }
 
@@ -67,11 +68,12 @@ p {
                     display: flex;
                     justify-content: center;
                     .check {
-                        width: 70px;
-                        height: 30px;
+                        width: 80px;
+                        height: 35px;
                         background-color: rgb(219, 219, 219);
                         border: 1px solid  rgb(180, 180, 180);;
                         border-radius: 10px;
+                        transition: 0.2s;
                     }
                 }
                 .dog-age-form{
@@ -115,7 +117,7 @@ p {
                     }
                 }
                 img {
-                    height: 100%;
+                    height: 200px;
                     width: 100%;
                 }
 
@@ -123,11 +125,12 @@ p {
                     display: flex;
                     justify-content: center;
                     .reset {
-                        width: 70px;
-                        height: 30px;
+                        width: 80px;
+                        height: 35px;
                         background-color: rgb(219, 219, 219);
                         border: 1px solid  rgb(180, 180, 180);;
                         border-radius: 10px;
+                        transition: 0.2s;
                     }
                 }
             }
@@ -135,24 +138,23 @@ p {
     }
 }
 
-.dog-size:hover {
-    background-color: rgb(33, 150, 243);
+.btn:hover {
+    background-color: rgb(33, 150, 243) !important;
     color: white;
 }
 
-@media screen and (min-width: 1150px) {
+
+@media screen and (min-width: 1000px) {
     .main-container {
         margin: 0 auto;
-        width: 1150px;
+        width: 1000px;
             .calculator-container {
                 .dog-size-container{
-        
                     .dog-sizes{
                         justify-content: space-around;
                         flex-direction: row;
                     }
                 }
-                
                 .dog-age-container{
                     .dog-input-form{
                         .dog-age-form{
@@ -164,18 +166,6 @@ p {
                                 font-size: 18px;
                                 background-color: rgb(219, 219, 219);
                             }
-                        }
-                    }
-                    .check-btn{
-                        display: block;
-                        width: 100px;
-                        height: 30px;
-                        .check {
-                            width: 100px;
-                            height: 30px;
-                            background-color: rgb(219, 219, 219);
-                            border: 1px solid  rgb(180, 180, 180);;
-                            border-radius: 10px;
                         }
                     }
                 }

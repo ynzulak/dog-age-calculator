@@ -19,27 +19,27 @@ function Home() {
 						<h3>Dog size</h3>
 					</div>
 					<div className='dog-sizes'>
-						<div className='dog-size'>
+						<div className='dog-size btn'>
 							<span>Miniature</span>
 							<span>Up to 5kg</span>
 							<Image src={miniature} alt='Maltese'  />
 						</div>
-						<div className='dog-size'>
+						<div className='dog-size btn'>
 							<span>Small</span>
 							<span>5kg - 12kg</span>
 							<Image src={small} alt='Maltese'  />
 						</div>
-						<div className='dog-size'>
+						<div className='dog-size btn'>
 							<span>Medium</span>
 							<span>12kg - 23kg</span>
 							<Image src={medium} alt='Maltese'  />
 						</div>
-						<div className='dog-size'>
+						<div className='dog-size btn'>
 							<span>Big</span>
 							<span>23kg - 45kg</span>
 							<Image src={big} alt='Maltese'  />
 						</div>
-						<div className='dog-size'>
+						<div className='dog-size btn'>
 							<span>Large</span>
 							<span>From 45kg</span>
 							<Image src={large} alt='Maltese'  />
@@ -60,7 +60,7 @@ function Home() {
 							</div>
 						</div>
 						<div className='check-btn'>
-							<button className='check'>Check</button>
+							<button className='check btn'>Check</button>
 						</div>
 				</div>
 				</div>
@@ -81,7 +81,7 @@ function Home() {
 							<p>Your dog is an adult now</p>							
 						</div>
 						<div className='reset-btn'>
-							<button className='reset'>Reset</button>
+							<button className='reset btn'>Reset</button>
 						</div>
 					</div>
 				</div>
