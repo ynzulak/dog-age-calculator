@@ -78,7 +78,7 @@ function Home() {
 							<p>Smaller dogs usually live longer than bigger races</p>
 							<p>Your dog is: 10 years</p>
 							<p>So, if it would be human it would be 52</p>
-							<p>Your dog is an adult now</p>							
+							<p>Your dog is an adult now!</p>							
 						</div>
 						<div className='reset-btn'>
 							<button className='reset btn'>Reset</button>
