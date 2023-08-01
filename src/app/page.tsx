@@ -1,3 +1,7 @@
+'use client';
+
+import classToggle from '../../components/classToggle'
+
 import Image from 'next/image'
 import miniature from '../images/miniature.png'
 import small from '../images/small.png'
@@ -8,6 +12,8 @@ import large from '../images/large.png'
 import './styles/main.scss'
 
 function Home() {
+
+
 	return (
 		<div className='main-container'>
 			<div className='calculator-container'>
@@ -24,7 +30,7 @@ function Home() {
 							<span>Up to 5kg</span>
 							<Image src={miniature} alt='Maltese'  />
 						</div>
-						<div className='dog-size btn'>
+						<div onClick={classToggle.handleToggleClick} className={classToggle.isToggled ? 'dog-selected' : ''}>
 							<span>Small</span>
 							<span>5kg - 12kg</span>
 							<Image src={small} alt='Maltese'  />
