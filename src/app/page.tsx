@@ -1,18 +1,11 @@
 'use client';
 
-import classToggle from '../../components/classToggle'
+import classToggle from '../../components/classToggle';
 
-import Image from 'next/image'
-import miniature from '../images/miniature.png'
-import small from '../images/small.png'
-import medium from '../images/medium.png'
-import big from '../images/big.png'
-import large from '../images/large.png'
 
 import './styles/main.scss'
 
 function Home() {
-
 
 	return (
 		<div className='main-container'>
@@ -25,27 +18,27 @@ function Home() {
 						<h3>Dog size</h3>
 					</div>
 					<div className='dog-sizes'>
-						<div className='dog-size btn'>
+						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
 							<span>Miniature</span>
 							<span>Up to 5kg</span>
 							<Image src={miniature} alt='Maltese'  />
 						</div>
-						<div onClick={classToggle.handleToggleClick} className={classToggle.isToggled ? 'dog-selected' : ''}>
+						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
 							<span>Small</span>
 							<span>5kg - 12kg</span>
 							<Image src={small} alt='Maltese'  />
 						</div>
-						<div className='dog-size btn'>
+						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
 							<span>Medium</span>
 							<span>12kg - 23kg</span>
 							<Image src={medium} alt='Maltese'  />
 						</div>
-						<div className='dog-size btn'>
+						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
 							<span>Big</span>
 							<span>23kg - 45kg</span>
 							<Image src={big} alt='Maltese'  />
 						</div>
-						<div className='dog-size btn'>
+						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
 							<span>Large</span>
 							<span>From 45kg</span>
 							<Image src={large} alt='Maltese'  />
