@@ -1,6 +1,6 @@
 'use client';
-
-import classToggle from '../../components/classToggle';
+import Image from 'next/image';
+import ClassToggle from '../../components/classToggle';
 
 
 import './styles/main.scss'
@@ -17,33 +17,7 @@ function Home() {
 					<div className='dog-size-title'>
 						<h3>Dog size</h3>
 					</div>
-					<div className='dog-sizes'>
-						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
-							<span>Miniature</span>
-							<span>Up to 5kg</span>
-							<Image src={miniature} alt='Maltese'  />
-						</div>
-						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
-							<span>Small</span>
-							<span>5kg - 12kg</span>
-							<Image src={small} alt='Maltese'  />
-						</div>
-						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
-							<span>Medium</span>
-							<span>12kg - 23kg</span>
-							<Image src={medium} alt='Maltese'  />
-						</div>
-						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
-							<span>Big</span>
-							<span>23kg - 45kg</span>
-							<Image src={big} alt='Maltese'  />
-						</div>
-						<div onClick={handleToggleClick} className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
-							<span>Large</span>
-							<span>From 45kg</span>
-							<Image src={large} alt='Maltese'  />
-						</div>
-					</div>
+					<ClassToggle />
 					<div className='dog-age-container'>
 						<div className='dog-age-title'>
 							<h3>Dog age</h3>
@@ -71,7 +45,7 @@ function Home() {
 					</div>
 					<div className='dog-size-result'>
 						<div className='dog-result-img'>
-							<Image src={miniature} alt='Maltese'  />
+							<Image src='' alt='Maltese'  />
 						</div>
 						<div className='result-description'>
 							<p>Smaller dogs usually live longer than bigger races</p>
