@@ -31,9 +31,11 @@ function classToggle() {
             <div
               key={element.id}
               onClick={() => {handleToggleClick(element.id)
-              console.log(element.imagePath);
+                console.log(element);
+                console.log(element.id);
+                console.log(isToggled == element.id);
               }}
-              className={isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
+              className={isToggled == element.id ? 'dog-selected dog-size btn' : 'dog-size btn'}>
               <span>{element.title}</span>
               <span>{element.description}</span>
               <Image src={element.imagePath} alt={element.breed}  />
