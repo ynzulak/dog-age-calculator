@@ -31,6 +31,7 @@ function classToggle() {
             <div
               key={element.id}
               onClick={() => {handleToggleClick(element.id)
+                //forEach sprobowac w tej funckji
                 console.log(element);
                 console.log(element.id);
                 console.log(isToggled == element.id);
