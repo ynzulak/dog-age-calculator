@@ -15,11 +15,12 @@ function classSelect() {
       };
 
       const imagesData = [
-        { id: 1, imagePath: {miniature}, title: 'Miniature', description: 'Up to 5kg', breed: 'Maltese'},
-        { id: 2, imagePath: {small}, title: 'Small', description: '5kg - 12kg' ,breed: 'Jack Russell Terrier'},
-        { id: 3, imagePath: {medium}, title: 'Medium', description: '12kg - 23kg', breed: 'Beagle'},
-        { id: 4, imagePath: {big}, title: 'Big', description: '23kg - 45kg', breed: 'Golden Retriever'},
-        { id: 5, imagePath: {large}, title: 'Large', description: 'From 45kg', breed: 'Tibetan Mastiff '},
+        { id: 1, imagePath: require('../src/images/miniature.png'), title: 'Miniature', description: 'Up to 5kg', breed: 'Maltese'},
+        { id: 2, imagePath: require('../src/images/small.png'), title: 'Small', description: '5kg - 12kg' ,breed: 'Jack Russell Terrier'},
+        { id: 3, imagePath: require('../src/images/medium.png'), title: 'Medium', description: '12kg - 23kg', breed: 'Beagle'},
+        { id: 4, imagePath: require('../src/images/big.png'), title: 'Big', description: '23kg - 45kg', breed: 'Golden Retriever'},
+        { id: 5, imagePath: require('../src/images/large.png')
+        , title: 'Large', description: 'From 45kg', breed: 'Tibetan Mastiff '},
 
 
       ];
@@ -37,7 +38,7 @@ function classSelect() {
               className={idx === isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
               <span>{element.title}</span>
               <span>{element.description}</span>
-              <img src={element.imagePath} alt={element.breed}  />
+              <Image src={element.imagePath} alt={element.breed}  />
             </div>
           ))}
         </div>
