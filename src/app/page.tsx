@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import ClassToggle from '../../components/classToggle';
+import ClassSelect from '../../components/classSelect';
 
 
 import './styles/main.scss'
@@ -17,7 +17,7 @@ function Home() {
 					<div className='dog-size-title'>
 						<h3>Dog size</h3>
 					</div>
-					<ClassToggle />
+					<ClassSelect />
 					<div className='dog-age-container'>
 						<div className='dog-age-title'>
 							<h3>Dog age</h3>

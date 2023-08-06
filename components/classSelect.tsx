@@ -7,11 +7,11 @@ import medium from '../src/images/medium.png'
 import big from '../src/images/big.png'
 import large from '../src/images/large.png'
 
-function classToggle() {
-    const [isToggled, setIsToggled] = useState(false);
+function classSelect() {
+    const [isToggled, setIsToggled] = useState(0);
 
-    const handleToggleClick = () => {
-        setIsToggled(!isToggled);
+    const handleOnClick = (index) => {
+        setIsToggled(index);
       };
 
       const imagesData = [
@@ -27,23 +27,21 @@ function classToggle() {
       
       return (
         <div className='dog-sizes'>
-          {imagesData.map((element) => (
+          {imagesData.map((element, idx) => (
             <div
-              key={element.id}
-              onClick={() => {handleToggleClick(element.id)
-                //forEach sprobowac w tej funckji
-                console.log(element);
-                console.log(element.id);
-                console.log(isToggled == element.id);
+            key={element.id}
+              onClick={() => {
+                handleOnClick(idx)
+              console.log(element.imagePath);
               }}
-              className={isToggled == element.id ? 'dog-selected dog-size btn' : 'dog-size btn'}>
+              className={idx === isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
               <span>{element.title}</span>
               <span>{element.description}</span>
-              <Image src={element.imagePath} alt={element.breed}  />
+              <img src={element.imagePath} alt={element.breed}  />
             </div>
           ))}
         </div>
       );
 }
 
-export default classToggle
+export default classSelect
