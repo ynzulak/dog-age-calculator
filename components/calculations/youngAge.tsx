@@ -1,4 +1,4 @@
-function youngAge() {
+function youngAge(index: number) {
 
 }
 

@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
-import ClassSelect from '../../components/classSelect';
-
+import DogSelect from '../../components/pages/dogSelect';
+import DogAgeInput from '../../components/pages/dogAgeInput'
 
 import './styles/main.scss'
 
@@ -17,24 +17,12 @@ function Home() {
 					<div className='dog-size-title'>
 						<h3>Dog size</h3>
 					</div>
-					<ClassSelect />
+					<DogSelect />
 					<div className='dog-age-container'>
 						<div className='dog-age-title'>
 							<h3>Dog age</h3>
 						</div>
-						<div className="dog-input-form">
-							<div className='dog-age-form'>
-								<input type='number' min='0' max='20' placeholder='0'></input>
-								<span>years</span>
-							</div>
-							<div className='dog-age-form'>
-								<input type='number' min='0' max='11' placeholder='0'></input>
-								<span>months</span>
-							</div>
-						</div>
-						<div className='check-btn'>
-							<button className='check btn'>Check</button>
-						</div>
+					<DogAgeInput />
 				</div>
 				</div>
 			</div>
