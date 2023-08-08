@@ -6,17 +6,17 @@ function dogAgeInput() {
     const [submittedValue, setSubmittedValue] = useState('');
     
     const handleInputYears = (event) => {
-        setInputValueYears(event.target.value);
+        setInputValueYears(parseInt(event.target.value));
         console.log(event.target.value);
       };
     const handleInputMonth = (event) => {
-        setInputValueMonths(event.target.value);
+        setInputValueMonths(parseInt(event.target.value));
         console.log(event.target.value);
       };
 
       const handleSubmit = () => {
         setSubmittedValue(inputValueYears + inputValueMonths);
-        console.log(inputValueYears + inputValueMonths);
+        console.log(parseInt(inputValueYears + inputValueMonths));
       };
 
     return(
