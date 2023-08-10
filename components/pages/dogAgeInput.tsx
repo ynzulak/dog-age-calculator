@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import DogAgeConverter from "../calculations/youngAge";
+
 function dogAgeInput() {
     const [inputValueYears, setInputValueYears] = useState('');
     const [inputValueMonths, setInputValueMonths] = useState('');
@@ -22,7 +24,7 @@ function dogAgeInput() {
     return(
         <><div className="dog-input-form">
             <div className='dog-age-form'>
-                <input type='number' min='0' max='20' placeholder='0' value={inputValueYears} onChange={handleInputYears}></input>
+                <input type='number' min='0' max='20' placeholder='0' value={inputValueYears} onChange={(e) => setDogYears(parseInt(e.target.value))}></input>
                 <span>years</span>
             </div>
             <div className='dog-age-form'>
