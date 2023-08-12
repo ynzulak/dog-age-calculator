@@ -11,12 +11,12 @@ function DogAgeConverter() {
 
         if (totalDogYears <= 0.5) {
             humanAge = Math.round(totalDogYears * 20);
-          } else if (totalDogYears > 0.5 || totalDogYears <= 1){
+          } else if (totalDogYears <= 1){
             humanAge = Math.round(totalDogYears * 16);
-        }else if (totalDogYears < 1 || totalDogYears <= 2){
+        }else if (totalDogYears <= 2){
             humanAge = Math.round(totalDogYears * 12);
         }else {
-            humanAge = Math.round(24 + ((totalDogYears - 3) * 5));
+            humanAge = Math.round(24 + ((totalDogYears - 3) * 4));
         }
 
         setHumanYears(humanAge);
