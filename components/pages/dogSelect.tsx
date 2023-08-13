@@ -1,12 +1,15 @@
 import { SetStateAction, useState } from "react";
 
+import dogIndex from "../calculations/dogIndex";
+
 import Image from "next/image";
 
 function dogSelect() {
     const [isToggled, setIsToggled] = useState(0);
 
-    const handleOnClick = (index: SetStateAction<number>) => {
+    const handleOnClick = (index: number) => {
         setIsToggled(index);
+        dogIndex(index)
         console.log(index);
       };
 
@@ -17,10 +20,18 @@ function dogSelect() {
         { id: 4, imagePath: require('../../src/images/big.png'), title: 'Big', description: '23kg - 45kg', breed: 'Golden Retriever'},
         { id: 5, imagePath: require('../../src/images/large.png')
         , title: 'Large', description: 'From 45kg', breed: 'Tibetan Mastiff '},
-
-
       ];
 
+
+      let dogWeight = 4;
+      for (let index = 0; index < imagesData.length; index++) {
+        // Tutaj możesz wykonywać operacje na elemencie tablicy, używając index i dogWeight
+        console.log(`Element[${index}] - Waga psa: ${dogWeight}`);
+        
+        // Inkrementuj wagę psa o 1 za każdym razem
+        dogWeight += 1;
+
+      }
       
       return (
         <div className='dog-sizes'>
