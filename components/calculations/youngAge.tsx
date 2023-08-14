@@ -31,6 +31,19 @@ function DogAgeConverter() {
                 <input type='number' min='0' max='20' placeholder='0' value={dogYears} onChange={(e) => setDogYears(parseInt(e.target.value))}></input>
                 <span>years</span>
             </div>
+
+
+
+<p>TUTAJ WPISZ JAKIŚ TEKTS: 2 RAZY W JEDEN DZIEN I DRUGI
+    >>>>> dasdas
+    >>>>> 
+    >>>>> 
+</p>
+
+
+
+
+
             <div className='dog-age-form'>
                 <input type='number' min='0' max='11' placeholder='0' value={dogMonths} onChange={(e) => setDogMonths(parseInt(e.target.value))}></input>
                 <span>months</span>
