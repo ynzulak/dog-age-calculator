@@ -35,9 +35,9 @@ function DogAgeConverter() {
 
 
 <p>TUTAJ WPISZ JAKIŚ TEKTS: 2 RAZY W JEDEN DZIEN I DRUGI
-    >>>>> dasdas
-    >>>>> dsadas
-    >>>>> 
+    amongsus
+    essowniczek
+    
 </p>
 
 
