@@ -33,17 +33,6 @@ function DogAgeConverter() {
             </div>
 
 
-
-<p>TUTAJ WPISZ JAKIŚ TEKTS: 2 RAZY W JEDEN DZIEN I DRUGI
-    amongsus
-    essowniczek
-    
-</p>
-
-
-
-
-
             <div className='dog-age-form'>
                 <input type='number' min='0' max='11' placeholder='0' value={dogMonths} onChange={(e) => setDogMonths(parseInt(e.target.value))}></input>
                 <span>months</span>
