@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import dogSelect from "../pages/dogSelect";
+import dogsData from "../dogsData";
 
 function DogAgeConverter() {
     const [dogYears, setDogYears] = useState(0);
@@ -10,6 +10,12 @@ function DogAgeConverter() {
     const convertToHumanYears = () => {
         const totalDogYears = dogYears + (dogMonths / 12);
         let humanAge: number 
+        let dogWeight = 4;
+ 
+        for (let index = 0; index < dogsData.length; index++) {
+          console.log(`Element[${index}] - Waga psa: ${dogWeight}`);
+          dogWeight += 1;
+        }
 
         if (totalDogYears <= 0.5) {
             humanAge = Math.round(totalDogYears * 20);
@@ -20,15 +26,7 @@ function DogAgeConverter() {
         }else {
             humanAge = Math.round(24 + ((totalDogYears - 3) * 4));
         }
-        let dogWeight = 4;
-        for (let index = 0; index < imagesData.length; index++) {
-          // Tutaj możesz wykonywać operacje na elemencie tablicy, używając index i dogWeight
-          console.log(`Element[${index}] - Waga psa: ${dogWeight}`);
-          
-          // Inkrementuj wagę psa o 1 za każdym razem
-          dogWeight += 1;
-  
-        }
+    
         
         setHumanYears(humanAge);
         console.log(humanYears);
@@ -48,8 +46,8 @@ function DogAgeConverter() {
                 <input type='number' min='0' max='11' placeholder='0' value={dogMonths} onChange={(e) => setDogMonths(parseInt(e.target.value))}></input>
                 <span>months</span>
             </div>
-        </div><div onClick={convertToHumanYears} className='check-btn'>
-                <button className='check btn'>Check</button>
+        </div><div className='check-btn'>
+                <button onClick={convertToHumanYears} className='check btn'>Check</button>
             </div></>
     );
 
