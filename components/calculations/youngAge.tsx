@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import dogSelect from "../pages/dogSelect";
+
 function DogAgeConverter() {
     const [dogYears, setDogYears] = useState(0);
     const [dogMonths, setDogMonths] = useState(0);
@@ -18,7 +20,16 @@ function DogAgeConverter() {
         }else {
             humanAge = Math.round(24 + ((totalDogYears - 3) * 4));
         }
-
+        let dogWeight = 4;
+        for (let index = 0; index < imagesData.length; index++) {
+          // Tutaj możesz wykonywać operacje na elemencie tablicy, używając index i dogWeight
+          console.log(`Element[${index}] - Waga psa: ${dogWeight}`);
+          
+          // Inkrementuj wagę psa o 1 za każdym razem
+          dogWeight += 1;
+  
+        }
+        
         setHumanYears(humanAge);
         console.log(humanYears);
         console.log(dogYears);
