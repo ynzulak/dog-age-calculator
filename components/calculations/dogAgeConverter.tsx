@@ -29,6 +29,7 @@ function DogAgeConverter() {
     
         
         setHumanYears(humanAge);
+
         console.log(humanYears);
         console.log(dogYears);
         console.log(totalDogYears);

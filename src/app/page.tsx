@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import DogSelect from '../../components/pages/dogSelect';
-import DogAgeConverter from '../../components/calculations/youngAge';
+import DogAgeConverter from '../../components/calculations/dogAgeConverter';
 
 import './styles/main.scss'
 
@@ -33,7 +33,7 @@ function Home() {
 					</div>
 					<div className='dog-size-result'>
 						<div className='dog-result-img'>
-							<Image src='' alt='Maltese'  />
+							{/* <Image src='' alt='Maltese'  /> */}
 						</div>
 						<div className='result-description'>
 							<p>Smaller dogs usually live longer than bigger races</p>

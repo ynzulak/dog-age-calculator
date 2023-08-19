@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import DogAgeConverter from "../calculations/youngAge";
+import DogAgeConverter from "../calculations/dogConverting";
 
 function dogAgeInput() {
     const [inputValueYears, setInputValueYears] = useState('');
