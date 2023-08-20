@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import dogsData from "../dogsData";
+import dogSelect from "../pages/dogSelect";
+
 
 function DogAgeConverter() {
     const [dogYears, setDogYears] = useState(0);
@@ -10,12 +12,7 @@ function DogAgeConverter() {
     const convertToHumanYears = () => {
         const totalDogYears = dogYears + (dogMonths / 12);
         let humanAge: number 
-        let dogWeight = 4;
- 
-        for (let index = 0; index < dogsData.length; index++) {
-          console.log(`Element[${index}] - Waga psa: ${dogWeight}`);
-          dogWeight += 1;
-        }
+
 
         if (totalDogYears <= 0.5) {
             humanAge = Math.round(totalDogYears * 20);
@@ -24,14 +21,13 @@ function DogAgeConverter() {
         }else if (totalDogYears <= 2){
             humanAge = Math.round(totalDogYears * 12);
         }else {
-            humanAge = Math.round(24 + ((totalDogYears - 3) * 4));
+            humanAge = Math.round(24 + ((totalDogYears - 2) * 4));
         }
     
         
         setHumanYears(humanAge);
 
         console.log(humanYears);
-        console.log(dogYears);
         console.log(totalDogYears);
       };
 

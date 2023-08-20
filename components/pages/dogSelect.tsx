@@ -31,5 +31,4 @@ function dogSelect() {
       );
 }
 
-
 export default dogSelect
