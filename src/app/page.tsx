@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import DogSelect from '../../components/pages/dogSelect';
 import DogAgeConverter from '../../components/calculations/dogAgeConverter';
 
 import './styles/main.scss'
@@ -17,13 +16,7 @@ function Home() {
 					<div className='dog-size-title'>
 						<h3>Dog size</h3>
 					</div>
-					<DogSelect />
-					<div className='dog-age-container'>
-						<div className='dog-age-title'>
-							<h3>Dog age</h3>
-						</div>
 					<DogAgeConverter />
-				</div>
 				</div>
 			</div>
 			<div className='calculator-result'>
