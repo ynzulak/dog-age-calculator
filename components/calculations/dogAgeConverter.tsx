@@ -28,9 +28,10 @@ function DogAgeConverter() {
           }
           
       console.log(dogWeight);
-      return
+
       };
       
+
 
 
     const convertToHumanYears = () => {
