@@ -13,7 +13,6 @@ function DogAgeConverter() {
     
     const handleOnClick = (index: number) => {
         setIsToggled(index);
-        console.log(index);
        
           if(index == 0){
             setDogWeight(4);
@@ -26,14 +25,10 @@ function DogAgeConverter() {
           }else if (index == 4) {
             setDogWeight(8);
           }
-          
-      console.log(dogWeight);
 
       };
-      
 
-
-
+      console.log(dogWeight);
     const convertToHumanYears = () => {
         const totalDogYears = dogYears + (dogMonths / 12);
         let humanAge: number 
