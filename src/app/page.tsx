@@ -1,11 +1,14 @@
 'use client';
 import Image from 'next/image';
-import DogAgeConverter from '../../components/calculations/dogAgeConverter';
+import DogAgeConverter from '../../components/pages/dogAgeConverter';
+import DogResult from '../../components/pages/dogResult';
 
 import './styles/main.scss'
 
 function Home() {
 
+
+	
 	return (
 		<div className='main-container'>
 			<div className='calculator-container'>
@@ -19,27 +22,7 @@ function Home() {
 					<DogAgeConverter />
 				</div>
 			</div>
-			<div className='calculator-result'>
-				<div className='age-result-container'>
-					<div className='age-result-title'>
-						<h3>Result</h3>
-					</div>
-					<div className='dog-size-result'>
-						<div className='dog-result-img'>
-							{/* <Image src='' alt='Maltese'  /> */}
-						</div>
-						<div className='result-description'>
-							<p>Smaller dogs usually live longer than bigger races</p>
-							<p>Your dog is: 10 years</p>
-							<p>So, if it would be human it would be 52</p>
-							<p>Your dog is an adult now!</p>							
-						</div>
-						<div className='reset-btn'>
-							<button className='reset btn'>Reset</button>
-						</div>
-					</div>
-				</div>
-			</div>
+			<DogResult />
 		</div>
 	)
 }
