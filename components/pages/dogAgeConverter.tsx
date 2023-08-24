@@ -56,7 +56,7 @@ function DogAgeConverter() {
             </div>
         </div><div className='check-btn'>
                 <button onClick={() => {
-                      convertToHumanYears(dogYeardsas, dogMonths, setHumanYears, dogWeight);
+                      convertToHumanYears(dogYears, dogMonths, setHumanYears, dogWeight);
                       handleClick()
               }} className='check btn'>Check</button>
             </div>
