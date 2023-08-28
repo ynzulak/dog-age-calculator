@@ -29,7 +29,7 @@ function DogAgeConverter({ dogsData }) {
         return(
         <>
          <div className='dog-sizes'>
-          {dogsData.map((element, idx) => (
+          {dogsData.map((elementt, idx) => (
             <div
             key={idx}
               onClick={() => {
