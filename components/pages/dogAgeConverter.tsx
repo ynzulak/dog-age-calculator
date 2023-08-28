@@ -8,15 +8,18 @@ import handleOnClick from "../calculations/handleOnClick";
 import convertToHumanYears from "../calculations/convertToHumanYears";
 import DogResult from "./dogResult";
 
-function DogAgeConverter() {
+function DogAgeConverter({ dogsData }) {
   const [dogYears, setDogYears] = useState(0);
   const [dogMonths, setDogMonths] = useState(0);
   const [humanYears, setHumanYears] = useState(0);
   const [dogWeight, setDogWeight] = useState(0);
   const [isToggled, setIsToggled] = useState(-1);
+  const [selectedElement, setSelectedElement] = useState(null);
+  const [ageStage, setAgeStage] = useState('');
+  
   console.log(dogWeight);
   console.log(humanYears);
-  
+  console.log(ageStage);
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
@@ -28,9 +31,9 @@ function DogAgeConverter() {
          <div className='dog-sizes'>
           {dogsData.map((element, idx) => (
             <div
-            key={element.id}
+            key={idx}
               onClick={() => {
-                handleOnClick(idx, setDogWeight, setIsToggled);
+                handleOnClick(idx, setDogWeight, setIsToggled, setSelectedElement);
               }}
               className={idx === isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
               <span>{element.title}</span>
@@ -56,11 +59,12 @@ function DogAgeConverter() {
             </div>
         </div><div className='check-btn'>
                 <button onClick={() => {
-                      convertToHumanYears(dogYears, dogMonths, setHumanYears, dogWeight);
+                      convertToHumanYears(dogYears, dogMonths, setHumanYears, dogWeight, setAgeStage);
                       handleClick()
               }} className='check btn'>Check</button>
             </div>
         </div>
+        {selectedElement && (
         <div className={isClicked ? 'calculator-result' : 'calculator-result hidden'}>
             <div className='age-result-container'>
               <div className='age-result-title'>
@@ -68,13 +72,13 @@ function DogAgeConverter() {
               </div>
               <div className='dog-size-result'>
                 <div className='dog-result-img'>
-                  {/* <Image src='' alt='Maltese'  /> */}
+                  <Image src={selectedElement.imagePath} alt={selectedElement.breed}  />
                 </div>
                 <div className='result-description'>
                   <p>Smaller dogs usually live longer than bigger races</p>
-                  <p>Your dog is: 10 years</p>
-                  <p>So, if it would be human it would be 52</p>
-                  <p>Your dog is an adult now!</p>							
+                  <p>Your dog have {dogYears > 0 ? dogYears + " years" : ''} {dogMonths > 0 ? dogMonths + " months" : ''}</p>
+                  <p>So, if it would be human it would be {humanYears}</p>
+                  <p>{ageStage}</p>							
                 </div>
                 <div className='reset-btn'>
                   <button className='reset btn'>Reset</button>
@@ -82,6 +86,7 @@ function DogAgeConverter() {
               </div>
             </div>
           </div>
+          )}
             </>
     );
 

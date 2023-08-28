@@ -4,7 +4,7 @@ const dogsData = [
     { id: 3, imagePath: require('./../src/images/medium.png'), title: 'Medium', description: '12kg - 23kg', breed: 'Beagle'},
     { id: 4, imagePath: require('./../src/images/big.png'), title: 'Big', description: '23kg - 45kg', breed: 'Golden Retriever'},
     { id: 5, imagePath: require('./../src/images/large.png')
-    , title: 'Large', description: 'From 45kg', breed: 'Tibetan Mastiff '},
+    , title: 'Large', description: 'From 45kg', breed: 'Tibetan Mastiff'},
   ];
 
 export default dogsData

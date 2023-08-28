@@ -1,6 +1,9 @@
 import { SetStateAction } from "react";
+import dogsData from "../dogsData";
 
-const handleOnClick = (index:number , setDogWeight: { (value: SetStateAction<number>): void; (arg0: number): void; }, setIsToggled: { (value: SetStateAction<number>): void; (arg0: number): void; }) => {
+const handleOnClick = (index:number , setDogWeight: { (value: SetStateAction<number>): void; (arg0: number): void; }, setIsToggled: { (value: SetStateAction<number>): void; (arg0: number): void; }, setSelectedElement: ((arg0: any) => void) | undefined) => {
+  const clickedElement = dogsData[index];
+  setSelectedElement(clickedElement);
     setIsToggled(index);
     let dogWeight = 0;
     if (index === 0) {
