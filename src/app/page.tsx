@@ -22,7 +22,6 @@ function Home() {
 					<DogAgeConverter dogsData={dogsData}/>
 				</div>
 			</div>
-			<DogResult />
 		</div>
 	)
 }
