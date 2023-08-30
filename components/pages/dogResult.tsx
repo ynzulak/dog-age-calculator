@@ -10,9 +10,11 @@ function DogResult() {
     setIsClicked(true);
   };
 
+  //oddziel te pliki
 
     return(
       <>
+  
       {selectedElement && (
         <div className={isClicked ? 'calculator-result' : 'calculator-result hidden'}>
             <div className='age-result-container'>
