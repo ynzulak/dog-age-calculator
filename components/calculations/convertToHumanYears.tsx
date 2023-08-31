@@ -12,7 +12,7 @@ const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears:
     } else if (totalDogYears <= 2) {
       humanAge = Math.round(totalDogYears * 12);
     } else {
-      humanAge = Math.round(24 + (totalDogYears - 3) * dogWeight);
+      humanAge = Math.round(24 + (totalDogYears - 4) * dogWeight);
     }
 
     setHumanYears(humanAge);
