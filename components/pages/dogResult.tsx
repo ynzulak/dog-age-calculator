@@ -10,7 +10,7 @@ function DogResult() {
     setIsClicked(true);
   };
 
-  //oddziel te pliki
+
 
     return(
       <>
