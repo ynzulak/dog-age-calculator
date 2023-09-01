@@ -17,6 +17,8 @@ const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears:
 
     setHumanYears(humanAge);
   
+   //Podzielic pliki
+
     if(humanAge <= 1) {
       ageStagesString = "Your dog is a baby!"
     } else if (humanAge <= 12){
