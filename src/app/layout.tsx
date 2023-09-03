@@ -16,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head> 
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      </head>
+      <body className={inter.className}>{children}
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      </body>
     </html>
   )
 }

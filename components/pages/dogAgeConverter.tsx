@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import handleOnClick from "../calculations/handleOnClick"; 
 import convertToHumanYears from "../calculations/convertToHumanYears";
+import { CSSTransition } from 'react-transition-group';
 import DogResult from "./dogResult";
 
 function DogAgeConverter({ dogsData }) {
@@ -69,6 +70,11 @@ function DogAgeConverter({ dogsData }) {
             </div>
         </div>
         {selectedElement && (
+           <CSSTransition
+           in={isClicked}
+           timeout={1000} 
+           classNames="fade"
+         >
         <div className={isClicked ? 'calculator-result' : 'calculator-result hidden'}>
             <div className='age-result-container'>
               <div className='age-result-title'>
@@ -90,6 +96,7 @@ function DogAgeConverter({ dogsData }) {
               </div>
             </div>
           </div>
+          </CSSTransition>
           )}
             </>
     );
