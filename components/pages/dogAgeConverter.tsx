@@ -72,7 +72,7 @@ function DogAgeConverter({ dogsData }) {
         {selectedElement && (
            <CSSTransition
            in={isClicked}
-           timeout={1000} 
+           timeout={10000} 
            classNames="fade"
          >
         <div className={isClicked ? 'calculator-result' : 'calculator-result hidden'}>
