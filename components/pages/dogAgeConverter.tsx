@@ -4,19 +4,20 @@ import dogsData from "../dogsData";
 
 import Image from "next/image";
 
+import resetButton from "../resetButton";
 import handleOnClick from "../calculations/handleOnClick"; 
 import convertToHumanYears from "../calculations/convertToHumanYears";
 import { CSSTransition } from 'react-transition-group';
 import DogResult from "./dogResult";
 
-function DogAgeConverter({ dogsData }) {
+function DogAgeConverter({  }) {
   const [dogYears, setDogYears] = useState(0);
   const [dogMonths, setDogMonths] = useState(0);
   const [humanYears, setHumanYears] = useState(0);
   const [dogWeight, setDogWeight] = useState(0);
   const [isToggled, setIsToggled] = useState(-1);
   const [selectedElement, setSelectedElement] = useState(null);
-  const [ageStage, setAgeStage] = useState('');
+  const [ageStage, setAgeStage] = useState("");
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
@@ -72,7 +73,7 @@ function DogAgeConverter({ dogsData }) {
         {selectedElement && (
            <CSSTransition
            in={isClicked}
-           timeout={10000} 
+           timeout={1000} 
            classNames="fade"
          >
         <div className={isClicked ? 'calculator-result' : 'calculator-result hidden'}>
@@ -91,7 +92,7 @@ function DogAgeConverter({ dogsData }) {
                   <p>{ageStage}</p>							
                 </div>
                 <div className='reset-btn'>
-                  <button className='reset btn'>Reset</button>
+                  <button className='reset btn' onClick={resetButton}>Reset</button>
                 </div>
               </div>
             </div>

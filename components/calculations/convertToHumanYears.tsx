@@ -1,9 +1,9 @@
 import { SetStateAction } from "react";
 
-const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears: { (value: SetStateAction<number>): void; (arg0: number): void; }, dogWeight: number, setAgeStage: { (value: SetStateAction<string>): void; (arg0: string): void; }) => {
+const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears: (value: SetStateAction<number>) => void, dogWeight: number, setAgeStage: (value: SetStateAction<string>) => void) => {
     const totalDogYears = dogYears + dogMonths / 12;
     let humanAge = 0;
-    let ageStagesString: string = ''
+    let ageStagesString = ""
 
     if (totalDogYears <= 0.5) {
       humanAge = Math.round(totalDogYears * 20);
@@ -17,15 +17,13 @@ const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears:
 
     setHumanYears(humanAge);
   
-   //Podzielic pliki
-
     if(humanAge <= 1) {
       ageStagesString = "Your dog is a baby!"
     } else if (humanAge <= 12){
       ageStagesString = "Your dog is a teen!"
     }
+    console.log(ageStagesString);
     setAgeStage(ageStagesString)
-    
   };
   
   export default convertToHumanYears;
