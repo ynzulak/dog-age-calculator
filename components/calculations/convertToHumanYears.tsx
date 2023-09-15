@@ -7,22 +7,31 @@ const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears:
 
     if (totalDogYears <= 0.5) {
       humanAge = Math.round(totalDogYears * 20);
-    } else if (totalDogYears <= 1) {
+    } else if (totalDogYears < 1) {
+      humanAge = Math.round(totalDogYears * 18);
+    } else if (totalDogYears < 2) {
       humanAge = Math.round(totalDogYears * 16);
-    } else if (totalDogYears <= 2) {
+    } else if (totalDogYears < 3) {
       humanAge = Math.round(totalDogYears * 12);
+    } else if (totalDogYears < 4) {
+      humanAge = Math.round(24 + (totalDogYears - 2) * dogWeight);
     } else {
-      humanAge = Math.round(24 + (totalDogYears - 4) * dogWeight);
+      humanAge = Math.round(24 + (totalDogYears - 3) * dogWeight);
     }
 
     setHumanYears(humanAge);
   
-    if(humanAge <= 1) {
+    if(humanAge <= 1 ) {
       ageStagesString = "Your dog is a baby!"
     } else if (humanAge <= 12){
+      ageStagesString = "Your dog is a child!"
+    } else if (humanAge <= 19 ){
       ageStagesString = "Your dog is a teen!"
+    } else if (humanAge <= 70){
+      ageStagesString = "Your dog is adult!"
+    } else if (humanAge >= 71){
+      ageStagesString = "Your dog is old!"
     }
-    console.log(ageStagesString);
     setAgeStage(ageStagesString)
   };
   
