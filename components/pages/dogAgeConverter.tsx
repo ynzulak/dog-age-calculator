@@ -8,7 +8,6 @@ import resetButton from "../resetButton";
 import handleOnClick from "../calculations/handleOnClick"; 
 import convertToHumanYears from "../calculations/convertToHumanYears";
 import { CSSTransition } from 'react-transition-group';
-import DogResult from "./dogResult";
 
 function DogAgeConverter({  }) {
   const [dogYears, setDogYears] = useState(0);
@@ -23,9 +22,7 @@ function DogAgeConverter({  }) {
   const handleClick = () => {
     setIsClicked(true);
   };
-  console.log(dogWeight);
-  console.log(humanYears);
-  console.log(ageStage);
+
 
         return(
         <>
@@ -35,7 +32,7 @@ function DogAgeConverter({  }) {
               </div>
             <div className='dog-sizes'>
               {dogsData.map((element, idx) => (
-                <div
+                 <div
                 key={idx}
                   onClick={() => {
                     handleOnClick(idx, setDogWeight, setIsToggled, setSelectedElement);
@@ -56,14 +53,12 @@ function DogAgeConverter({  }) {
                     <input type='number' min='0' max='20' placeholder='0' value={dogYears} onChange={(e) => setDogYears(parseInt(e.target.value))}></input>
                     <span>years</span>
                 </div>
-
-
                 <div className='dog-age-form'>
                     <input type='number' min='0' max='11' placeholder='0' value={dogMonths} onChange={(e) => setDogMonths(parseInt(e.target.value))}></input>
                     <span>months</span>
                 </div>
             </div><div className='check-btn'>
-                    <button onClick={() => {
+            <button onClick={(e) => {
                           convertToHumanYears(dogYears, dogMonths, setHumanYears, dogWeight, setAgeStage);
                           handleClick()
                   }} className='check btn'>Check</button>
@@ -87,7 +82,9 @@ function DogAgeConverter({  }) {
                 </div>
                 <div className='result-description'>
                   <p>Smaller dogs usually live longer than bigger races</p>
-                  <p>Your dog have {dogYears > 0 ? dogYears + " years" : ''} {dogMonths > 0 ? dogMonths + " months" : ''}</p>
+                  <p>Your dog have {dogYears > 0 ? dogYears + " years" : ''}
+                  {dogYears && dogMonths > 0 ? " and " : ''}
+                  {dogMonths > 0 ? dogMonths + " months" : ''}</p>
                   <p>So, if it would be human it would be {humanYears}</p>
                   <p>{ageStage}</p>							
                 </div>
