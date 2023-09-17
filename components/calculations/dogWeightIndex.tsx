@@ -1,11 +1,19 @@
 import { SetStateAction } from "react";
 import dogsData from "../dogsData";
 
-const handleOnClick = (index:number , setDogWeight: { (value: SetStateAction<number>): void; (arg0: number): void; }, setIsToggled: { (value: SetStateAction<number>): void; (arg0: number): void; }, setSelectedElement: ((arg0: any) => void)) => {
+const handleOnClick = (index:number , setDogWeight: { (value: SetStateAction<number>): void; (arg0: number): void; }, setIsToggled: { (value: SetStateAction<number>): void; (arg0: number): void; }, setSelectedElement: ((arg0: any) => void), setErrorMessage) => {
+  
   const clickedElement = dogsData[index];
-  setSelectedElement(clickedElement);
+  let dogWeight = 0;
+
+  if(dogWeight) {
+    setErrorMessage('Brak danych');
+    setSelectedElement(null)
+  }
+
+    setSelectedElement(clickedElement);
     setIsToggled(index);
-    let dogWeight = 0;
+    
     if (index === 0) {
       dogWeight = 4;
     } else if (index === 1) {
