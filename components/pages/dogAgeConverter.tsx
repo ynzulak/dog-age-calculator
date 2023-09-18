@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import dogsData from "../dogsData";
 
@@ -8,6 +8,7 @@ import resetButton from "../resetButton";
 import dogWeightIndex from "../calculations/dogWeightIndex"; 
 import convertToHumanYears from "../calculations/convertToHumanYears";
 import { CSSTransition } from 'react-transition-group';
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 function DogAgeConverter({dogsData}: {dogsData: any}) {
   const [dogYears, setDogYears] = useState(0);
@@ -35,9 +36,8 @@ function DogAgeConverter({dogsData}: {dogsData: any}) {
                 <h3>Dog size</h3>
               </div>
             <div className='dog-sizes'>
-              {dogsData.map((element, idx) => (
+              {dogsData.map((element: { title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; imagePath: string | StaticImport; breed: string; }, idx: number) => (
                  <div
-                  key={idx}
                   onClick={() => {
                     dogWeightIndex(idx, setDogWeight, setIsToggled, setSelectedElement);
                   }}
