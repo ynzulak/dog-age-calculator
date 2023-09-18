@@ -36,7 +36,7 @@ function DogAgeConverter({dogsData}: {dogsData: any}) {
                 <h3>Dog size</h3>
               </div>
             <div className='dog-sizes'>
-              {dogsData.map((element: { title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; imagePath: string | StaticImport; breed: string; }, idx: Key | null | undefined) => (
+              {dogsData.map((element: { title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; imagePath: string | StaticImport; breed: string; }, idx: any) => (
                  <div
                   key={idx}
                   onClick={() => {
