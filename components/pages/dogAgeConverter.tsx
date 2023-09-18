@@ -9,7 +9,7 @@ import dogWeightIndex from "../calculations/dogWeightIndex";
 import convertToHumanYears from "../calculations/convertToHumanYears";
 import { CSSTransition } from 'react-transition-group';
 
-function DogAgeConverter() {
+function DogAgeConverter({dogsData}) {
   const [dogYears, setDogYears] = useState(0);
   const [dogMonths, setDogMonths] = useState(0);
   const [humanYears, setHumanYears] = useState(0);
