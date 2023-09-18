@@ -1,12 +1,7 @@
-import { SetStateAction, useRef } from "react";
+import { SetStateAction } from "react";
 
-const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears: (value: SetStateAction<number>) => void, dogWeight: number, setAgeStage: (value: SetStateAction<string>) => void, setResult: ((arg0: null) => void) | undefined, setErrorMessage, selectedElement) => {
+const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears: (value: SetStateAction<number>) => void, dogWeight: number, setAgeStage: (value: SetStateAction<string>) => void) => {
 
-  if (!dogYears && !dogMonths) {
-      setErrorMessage('Brak danych');
-      console.log('convert');
-      selectedElement(null);
-  }
 
     const totalDogYears = dogYears + dogMonths / 12;
     let humanAge = 0;

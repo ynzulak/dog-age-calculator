@@ -39,7 +39,7 @@ function DogAgeConverter() {
                  <div
                   key={idx}
                   onClick={() => {
-                    dogWeightIndex(idx, setDogWeight, setIsToggled, setSelectedElement, setErrorMessage);
+                    dogWeightIndex(idx, setDogWeight, setIsToggled, setSelectedElement);
                   }}
                   className={idx === isToggled ? 'dog-selected dog-size btn' : 'dog-size btn'}>
                   <span>{element.title}</span>
@@ -63,7 +63,7 @@ function DogAgeConverter() {
                 </div>
             </div><div className='check-btn'>
             <button onClick={() => {
-                          convertToHumanYears(dogYears, dogMonths, setHumanYears, dogWeight, setAgeStage, setErrorMessage);
+                          convertToHumanYears(dogYears, dogMonths, setHumanYears, dogWeight, setAgeStage);
                           handleClick()
                   }} className='check btn'>Check</button>
                 </div>
