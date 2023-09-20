@@ -11,7 +11,7 @@ import { CSSTransition } from 'react-transition-group';
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 function DogAgeConverter({dogsData}: {dogsData: any}) {
-  const [dogYears, setDogYears] = useState(0);
+  const [dogYears, setDogYears] = useState('');
   const [dogMonths, setDogMonths] = useState(0);
   const [humanYears, setHumanYears] = useState(0);
   const [dogWeight, setDogWeight] = useState(0);
@@ -20,14 +20,19 @@ function DogAgeConverter({dogsData}: {dogsData: any}) {
   const [ageStage, setAgeStage] = useState("");
   const [isClicked, setIsClicked] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [result, setResult] = useState(0);
 
-
-
-  const ref = useRef<null | HTMLDivElement>(null);
-
+  const handleCalculation = () => {
+    const newValue = parseFloat(dogYears);
+    if (!isNaN(newValue)) {
+      setResult(newValue * 2);
+    } else {
+      setResult(0); // or display an error message
+    }
+  };
+console.log(dogYears);
   const handleClick = () => {
     setIsClicked(true);
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
         return(
         <>
@@ -55,7 +60,9 @@ function DogAgeConverter({dogsData}: {dogsData: any}) {
                 </div>
                 <div className="dog-input-form">
                 <div className='dog-age-form'>
-                    <input type='number' min='0' max='20' placeholder='0' value={dogYears} onChange={(e) => setDogYears(parseInt(e.target.value))}></input>
+                    <input type='number' min='0' max='20' placeholder='0' value={dogYears} onChange={(e) => 
+                      setDogYears(e.target.value)
+                      }></input>
                     <span>years</span>
                 </div>
                 <div className='dog-age-form'>
@@ -66,7 +73,9 @@ function DogAgeConverter({dogsData}: {dogsData: any}) {
             <button onClick={() => {
                           convertToHumanYears(dogYears, dogMonths, setHumanYears, dogWeight, setAgeStage);
                           handleClick()
+                          handleCalculation()
                   }} className='check btn'>Check</button>
+                  {isNaN(result) ? <p>Please enter a valid number.</p> : <p>Result: {result}</p>}
                 </div>
             </div>
         </div>

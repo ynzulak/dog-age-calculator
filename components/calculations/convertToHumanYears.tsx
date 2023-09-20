@@ -7,6 +7,8 @@ const convertToHumanYears = (dogYears: number, dogMonths: number, setHumanYears:
     let humanAge = 0;
     let ageStagesString = ""
 
+
+
     if (totalDogYears <= 0.5) {
       humanAge = Math.round(totalDogYears * 20);
     } else if (totalDogYears < 1) {
