@@ -1,7 +1,5 @@
-import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useRef, useState } from "react";
-import { createRoot } from "react-dom/client";
-import dogsData from "../dogsData";
-
+import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useState } from "react";
+import dogYearsInput from "../dogYearsInput";
 import Image from "next/image";
 
 import resetButton from "../resetButton";
@@ -11,7 +9,7 @@ import { CSSTransition } from 'react-transition-group';
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 function DogAgeConverter({dogsData}: {dogsData: any}) {
-  const [dogYears, setDogYears] = useState('');
+  const [dogYears, setDogYears] = useState(0);
   const [dogMonths, setDogMonths] = useState(0);
   const [humanYears, setHumanYears] = useState(0);
   const [dogWeight, setDogWeight] = useState(0);
@@ -22,18 +20,10 @@ function DogAgeConverter({dogsData}: {dogsData: any}) {
   const [errorMessage, setErrorMessage] = useState('');
   const [result, setResult] = useState(0);
 
-  const handleCalculation = () => {
-    const newValue = parseFloat(dogYears);
-    if (!isNaN(newValue)) {
-      setResult(newValue * 2);
-    } else {
-      setResult(0); // or display an error message
-    }
-  };
-console.log(dogYears);
   const handleClick = () => {
     setIsClicked(true);
   };
+
         return(
         <>
         	<div className='dog-size-container'>
@@ -60,22 +50,18 @@ console.log(dogYears);
                 </div>
                 <div className="dog-input-form">
                 <div className='dog-age-form'>
-                    <input type='number' min='0' max='20' placeholder='0' value={dogYears} onChange={(e) => 
-                      setDogYears(e.target.value)
-                      }></input>
+                    <input type='number' min='0' max='20' placeholder='0' value={dogYears} onChange={(e) => {dogYearsInput(e, setDogYears)}}></input>
                     <span>years</span>
                 </div>
                 <div className='dog-age-form'>
-                    <input type='number' min='0' max='11' placeholder='0' value={dogMonths} onChange={(e) => setDogMonths(parseInt(e.target.value))}></input>
+                    <input type='number' min='0' max='11' placeholder='0' value={dogMonths} onChange={(e) => dogYearsInput(e, setDogMonths)}></input>
                     <span>months</span>
                 </div>
             </div><div className='check-btn'>
             <button onClick={() => {
                           convertToHumanYears(dogYears, dogMonths, setHumanYears, dogWeight, setAgeStage);
                           handleClick()
-                          handleCalculation()
                   }} className='check btn'>Check</button>
-                  {isNaN(result) ? <p>Please enter a valid number.</p> : <p>Result: {result}</p>}
                 </div>
             </div>
         </div>
